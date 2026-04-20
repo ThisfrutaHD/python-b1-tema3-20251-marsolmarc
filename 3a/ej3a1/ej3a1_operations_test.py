@@ -1,5 +1,6 @@
 import pytest
 import ej3a1_operations
+from flake8.api import legacy as flake8
 
 
 def test_sumar():
@@ -28,3 +29,12 @@ def test_dividir():
 def test_division_por_cero():
     with pytest.raises(ZeroDivisionError):
         ej3a1_operations.divide(8, 0),  "The zero division operation does not work"
+
+
+def test_pep8_conformity():
+    style_guide = flake8.get_style_guide()
+    report = style_guide.check_files(["ej2d2.py"])
+    
+    assert report.get_statistics("") == [], (
+        "Your code does not comply with flake8. Please review your code"
+    )
