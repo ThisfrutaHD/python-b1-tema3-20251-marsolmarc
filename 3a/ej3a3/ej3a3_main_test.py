@@ -33,7 +33,7 @@ def test_pep8_conformity():
     style_guide = flake8.get_style_guide()
     report = style_guide.check_files([
         "ej3a3_main.py", 
-        "ej3a2_time_package/"
+        "ej3a3_time_package/"
     ])
     
     assert report.get_statistics("") == [], (

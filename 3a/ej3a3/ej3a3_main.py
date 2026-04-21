@@ -41,7 +41,9 @@ from ej3a3_time_package import convert_date_format, date_operations
 
 initial_date = convert_date_format.string_to_datetime("2023-12-25")
 final_date = date_operations.add_days(initial_date, 10)
-middle_date = date_operations.middle_day_between_two_dates(initial_date, final_date)
+middle_date = date_operations.middle_day_between_two_dates(
+    initial_date, final_date
+)
 
 print(initial_date)
 print(final_date)
