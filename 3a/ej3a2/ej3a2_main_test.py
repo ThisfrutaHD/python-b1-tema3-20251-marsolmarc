@@ -1,4 +1,5 @@
 from ej3a2_main import arithmetic, geometry
+from flake8.api import legacy as flake8
 
 # archivo: test_arithmetic.py
 def test_square_root():
@@ -30,3 +31,12 @@ def test_triangle_area():
 def test_circle_area():
     result = geometry.circle_area(5)
     assert round(result, 2) == 78.54,  "The circle_area operation does not work"
+
+
+def test_pep8_conformity():
+    style_guide = flake8.get_style_guide()
+    report = style_guide.check_files(["ej3a2_main.py"])
+    
+    assert report.get_statistics("") == [], (
+        "Your code does not comply with flake8. Please review your code"
+    )
