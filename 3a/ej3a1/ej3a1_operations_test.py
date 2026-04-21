@@ -33,7 +33,7 @@ def test_division_por_cero():
 
 def test_pep8_conformity():
     style_guide = flake8.get_style_guide()
-    report = style_guide.check_files(["ej2d2.py"])
+    report = style_guide.check_files(["ej3a1_operations.py"])
     
     assert report.get_statistics("") == [], (
         "Your code does not comply with flake8. Please review your code"
