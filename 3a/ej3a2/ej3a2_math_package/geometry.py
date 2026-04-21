@@ -1,6 +1,9 @@
 # geometry.py
 from math import pi
 
+__all__ = ["square_area", "rectangle_area", "triangle_area", "circle_area"]
+
+
 def square_area(side_length: float) -> float:
     """
     Calculate the area of a square.
