@@ -35,7 +35,10 @@ def test_circle_area():
 
 def test_pep8_conformity():
     style_guide = flake8.get_style_guide()
-    report = style_guide.check_files(["ej3a2_main.py"])
+    report = style_guide.check_files([
+        "ej3a2_main.py", 
+        "ej3a2_math_package/"
+    ])
     
     assert report.get_statistics("") == [], (
         "Your code does not comply with flake8. Please review your code"
